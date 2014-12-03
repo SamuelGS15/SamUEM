@@ -7,6 +7,7 @@ public class cifrarDescifrarCesar {
 	static BufferedReader bf = new BufferedReader(new InputStreamReader(
 			System.in));
 
+	// Método principal
 	public static void main(String[] args) {
 		String salida = " ";
 		int n = 0;
