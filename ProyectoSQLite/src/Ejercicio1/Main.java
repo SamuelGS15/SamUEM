@@ -14,6 +14,7 @@ public class Main {
 		System.out.println("");
 		bbdd.borrarTabla("tiempo");
 		System.out.println("");
+		System.out.println("");
 		
 		
 	}
