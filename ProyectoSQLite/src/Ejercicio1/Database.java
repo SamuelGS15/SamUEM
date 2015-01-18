@@ -8,8 +8,17 @@ import java.sql.Statement;
 
 public class Database {
 
+	/*
+	 * Para conectarnos necesitamos la librería adecuada en este caso la libreria es
+	 * sqlite-jdbc-3.8.7.jar
+	 * que nos la hemos descargado de http://www.xerial.org/trac/Xerial/wiki/SQLiteJDBC
+	 * y lo incluimos a nuestro proyecto
+	 */
+	
+	// A continuación le pasamos el URL, el camino y el nombre de la BBDD
 	private final static String DB = "forecast.db";
 	private final static String PATH = "./resources/";
+	//jdbc:sqlite indica que estamos usando un driver JDBC para SQLite y luego donde está la BBDD
 	private final static String URL = "jdbc:sqlite:" + PATH + DB;
 
 	private final static String DRIVER = "org.sqlite.JDBC";

@@ -36,6 +36,8 @@ public class Model extends Database {
 
 			// Ejecuto la sentencia sql que
 			// crea la tabla tiempo
+			// executeUpdate es un método que no devuelve resultados y se usa para
+			// las manipulaciones de datos: CREATE, DROP, ALTER, INSERT, UPDATE y DELETE
 			st.executeUpdate(CREATE_TABLE_TIEMPO);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -156,8 +158,9 @@ public class Model extends Database {
 			// No es obligatorio pero es bueno para dejar de buscar la BBDD
 			statement.setQueryTimeout(30); // set timeout to 30 sec.
 			
-			
-			String sql = "DROP TABLE "+table;
+			// executeUpdate para todas menos las de SELECT, porque no devuelve datos
+			String sql = "DROP TABLE IF EXISTS "+table;
+			//String sql = "DROP TABLE "+table;
 			//String sql = "DELETE FROM "+table+" WHERE id ="+ident;
 			
 			statement.executeUpdate(sql);
