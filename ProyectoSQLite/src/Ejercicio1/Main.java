@@ -12,9 +12,9 @@ public class Main {
 		System.out.println("");
 		bbdd.imprimirPrediciones("tiempo");
 		System.out.println("");
-		bbdd.borrarDatoTabla("tiempo", 2);
+		bbdd.borrarTabla("tiempo");
 		System.out.println("");
-		bbdd.imprimirPrediciones("tiempo");
+		
 		
 	}
 

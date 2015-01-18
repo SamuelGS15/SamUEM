@@ -142,9 +142,9 @@ public class Model extends Database {
 	
 	/**
 	 * 4
-	 * Borrar toda la tabla
+	 * Borrar tabla
 	 */
-	public void borrarDatoTabla(String table,int ident) {
+	public void borrarTabla(String table) {
 		
 		Connection connection = null;
 		
@@ -157,7 +157,7 @@ public class Model extends Database {
 			statement.setQueryTimeout(30); // set timeout to 30 sec.
 			
 			
-			String sql = "DROP TABLE"+table;
+			String sql = "DROP TABLE "+table;
 			//String sql = "DELETE FROM "+table+" WHERE id ="+ident;
 			
 			statement.executeUpdate(sql);
